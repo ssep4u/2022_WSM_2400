@@ -104,7 +104,7 @@ const urlToJSON = (url) => {
                     lunch.innerHTML = lunchData;
                 } catch {
                     lunch.innerHTML = "없음";
-                }
+                }           
                 try {
                     let dinnerData = json['mealServiceDietInfo'][1]['row'][2]['DDISH_NM'];
                     dinnerData = dinnerData.replace(/\([0-9\.]*\)/g, "");
