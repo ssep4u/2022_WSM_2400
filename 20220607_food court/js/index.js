@@ -40,25 +40,25 @@ const addNow = (homeCardId) => {
 addNow("home-card");
 //오늘의 날짜 표시하자
 const showToday = () => {
-    //오늘 구하고, 년, 월, 일, 요일 구하자
-    let now = new Date();
-    let year = now.getFullYear();
-    let month = now.getMonth() + 1;
-    let date = now.getDate();
-    let day = now.getDay();
-    const namesOfTheDaysOfTheWeek_array = ['일', '월', '화', '수', '목', '금', '토'];
-    // console.log(year, month, date, namesOfTheDaysOfTheWeek_array[day]);
-    
-    //문자열 형식 맞추고
-    let title = `${year}.${month}.${date}(${namesOfTheDaysOfTheWeek_array[day]})`;
-    // console.log(title);
-    
-    //HTML에 표시하자
-    let cardDateDivs = document.querySelectorAll(".card-date");
-    //let cardDateDivs = document.getElementsByClassName("card-date");
-    for (cardDateDiv of cardDateDivs) {
-        cardDateDiv.innerHTML = title;
-    }
+  //오늘 구하고, 년, 월, 일, 요일 구하자
+  let now = new Date();
+  let year = now.getFullYear();
+  let month = now.getMonth() + 1;
+  let date = now.getDate();
+  let day = now.getDay();
+  const namesOfTheDaysOfTheWeek_array = ['일', '월', '화', '수', '목', '금', '토'];
+  // console.log(year, month, date, namesOfTheDaysOfTheWeek_array[day]);
+
+  //문자열 형식 맞추고
+  let title = `${year}.${month}.${date}(${namesOfTheDaysOfTheWeek_array[day]})`;
+  // console.log(title);
+
+  //HTML에 표시하자
+  let cardDateDivs = document.querySelectorAll(".card-date");
+  //let cardDateDivs = document.getElementsByClassName("card-date");
+  for (cardDateDiv of cardDateDivs) {
+    cardDateDiv.innerHTML = title;
+  }
 }
 showToday();
 
