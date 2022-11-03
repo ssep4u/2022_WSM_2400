@@ -40,12 +40,12 @@ const handler = (event) => {
     let MLSV_YMD = `${year}${month.toString().padStart(2, "0")}${date.padStart(2, "0")}`;  //YYYYMMDD
     // console.log(MLSV_YMD);
     let url = `https://open.neis.go.kr/hub/mealServiceDietInfo`
-            + `?KEY=${KEY}`
-            + `&Type=json`
-            + `&ATPT_OFCDC_SC_CODE=${ATPT_OFCDC_SC_CODE}`
-            + `&SD_SCHUL_CODE=${SD_SCHUL_CODE}`
-            + `&MLSV_YMD=${MLSV_YMD}`;
-            // + `&MMEAL_SC_CODE=${MMEAL_SC_CODE}`;
+        + `?KEY=${KEY}`
+        + `&Type=json`
+        + `&ATPT_OFCDC_SC_CODE=${ATPT_OFCDC_SC_CODE}`
+        + `&SD_SCHUL_CODE=${SD_SCHUL_CODE}`
+        + `&MLSV_YMD=${MLSV_YMD}`;
+    // + `&MMEAL_SC_CODE=${MMEAL_SC_CODE}`;
     console.log(url);
     urlToJSON(url);
 
@@ -104,7 +104,7 @@ const urlToJSON = (url) => {
                     lunch.innerHTML = lunchData;
                 } catch {
                     lunch.innerHTML = "없음";
-                }           
+                }
                 try {
                     let dinnerData = json['mealServiceDietInfo'][1]['row'][2]['DDISH_NM'];
                     dinnerData = dinnerData.replace(/\([0-9\.]*\)/g, "");
@@ -125,7 +125,7 @@ const urlToJSON = (url) => {
             dinner.innerHTML = "없음";
         }
     }
-    
+
 }
 
 for (let gridItem of gridItems) {
